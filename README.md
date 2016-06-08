@@ -1,2 +1,2 @@
 # esther
-Website for Handmade Jewelry
+Laravel website for Handmade Jewelry
