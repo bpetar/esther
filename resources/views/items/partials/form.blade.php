@@ -4,24 +4,76 @@
 
 
 {{--Item Title--}}
-{!! Form::label('title') !!}
-{!! Form::text('title') !!}
-<br>
+<div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
+
+	<label for="title" class="col-md-4 control-label">Title</label>
+
+	<div class="col-md-6">
+	    <input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}">
+
+	    @if ($errors->has('title'))
+	        <span class="help-block">
+	            <strong>{{ $errors->first('title') }}</strong>
+	        </span>
+	    @endif
+	</div>
+</div>
 
 {{--Item Description--}}
-{!! Form::label('description') !!}
-{!! Form::text('description') !!}
-<br>
+<div class="form-group{{ $errors->has('description') ? ' has-error' : '' }}">
+
+	<label for="description" class="col-md-4 control-label">Description</label>
+
+	<div class="col-md-6">
+	    <input id="description" type="text" class="form-control" name="description" value="{{ old('description') }}">
+
+	    @if ($errors->has('description'))
+	        <span class="help-block">
+	            <strong>{{ $errors->first('description') }}</strong>
+	        </span>
+	    @endif
+	</div>
+</div>
+
 
 {{--Item Price--}}
-{!! Form::label('price') !!}
-{!! Form::text('price') !!}
-<br>
+<div class="form-group{{ $errors->has('price') ? ' has-error' : '' }}">
+
+	<label for="price" class="col-md-4 control-label">Price</label>
+
+	<div class="col-md-6">
+	    <input id="price" type="text" class="form-control" name="price" value="{{ old('price') }}">
+
+	    @if ($errors->has('price'))
+	        <span class="help-block">
+	            <strong>{{ $errors->first('price') }}</strong>
+	        </span>
+	    @endif
+	</div>
+</div>
 
 {{--Item Image--}}
-{!! Form::label('image') !!}
-{!! Form::file('image') !!}
+<div class="form-group{{ $errors->has('image') ? ' has-error' : '' }}">
+
+	<label for="image" class="col-md-4 control-label">Image</label>
+
+	<div class="col-md-6">
+	    {!! Form::file('image') !!}
+
+
+	    @if ($errors->has('image'))
+	        <span class="help-block">
+	            <strong>{{ $errors->first('image') }}</strong>
+	        </span>
+	    @endif
+	</div>
+</div>
 <br>
 
-
-<button type="submit" >Submit</button>
+<div class="form-group">
+    <div class="col-md-6 col-md-offset-4">
+        <button type="submit" class="btn btn-primary">
+            <i class="fa fa-btn fa-shield"></i> Submit
+        </button>
+    </div>
+</div>
