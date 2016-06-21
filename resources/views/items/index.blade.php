@@ -24,6 +24,8 @@
 	{{ Form::close() }}
 	
 	<br>
+	<br>
+	<br>
 
 	@endforeach
 

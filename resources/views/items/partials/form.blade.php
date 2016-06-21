@@ -9,7 +9,7 @@
 	<label for="title" class="col-md-4 control-label">Title</label>
 
 	<div class="col-md-6">
-	    <input id="title" type="text" class="form-control" name="title" value="{{ old('title') }}">
+	    {!! Form::text('title', null, array('class' => 'form-control', 'placeholder'=> 'Enter title here..')) !!}
 
 	    @if ($errors->has('title'))
 	        <span class="help-block">
@@ -25,7 +25,7 @@
 	<label for="description" class="col-md-4 control-label">Description</label>
 
 	<div class="col-md-6">
-	    <input id="description" type="text" class="form-control" name="description" value="{{ old('description') }}">
+	    {!! Form::text('description', null, array('class' => 'form-control', 'placeholder'=> 'Enter description here..')) !!}
 
 	    @if ($errors->has('description'))
 	        <span class="help-block">
@@ -42,7 +42,7 @@
 	<label for="price" class="col-md-4 control-label">Price</label>
 
 	<div class="col-md-6">
-	    <input id="price" type="text" class="form-control" name="price" value="{{ old('price') }}">
+	    {!! Form::text('price', null, array('class' => 'form-control', 'placeholder'=> 'Enter price here..')) !!}
 
 	    @if ($errors->has('price'))
 	        <span class="help-block">
@@ -58,6 +58,9 @@
 	<label for="image" class="col-md-4 control-label">Image</label>
 
 	<div class="col-md-6">
+
+		{{--<div style="border: solid #cccccc 1px; width: 100%; height: 200px; background:url('/@if(! empty($item)) {{$item->image}} @endif'); background-size:cover;"></div>--}}
+		
 	    {!! Form::file('image') !!}
 
 

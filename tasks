@@ -2,4 +2,13 @@ tasks
 
 + make items rest
 + make item image upload
-- make authentication
++ make authentication
+- make items in squares
+- admin available only to logged in
++ edit fill out form with item data (use form::syntax)
+- language
+- organize css and js files
+- sass
+
+- price must be number
+- edit picture not working
