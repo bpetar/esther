@@ -6,9 +6,10 @@ tasks
 - make items in squares
 - admin available only to logged in
 + edit fill out form with item data (use form::syntax)
-- language
-- organize css and js files
-- sass
-
+- language localization
++ organize css and js files
++ sass
+- subscribers
+- featured items on homepage
 - price must be number
 - edit picture not working
